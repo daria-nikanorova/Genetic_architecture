@@ -1,6 +1,14 @@
 # Genome-wide genetic correlation between traits
 
-In order to identify significant associations between complex traits and gene expression we applied TWAS/FUSION (transcriptome-wide association study) software (Gusev et al. 2016). TWAS was performed for 20 neurological and psychiatric disorders across 16 tissues. Precomputed expression reference weights based on GTEx v7 multi-tissue RNA-seq data for 16 tissues were obtained from http://gusevlab.org/projects/fusion/. Correlation between each pair of disorders was calculated using the RHOGE package (Gusev et al. 2016; Mancuso et al. 2017) (https://github.com/bogdanlab/RHOGE). 
+In order to identify significant associations between complex traits and gene expression we applied TWAS/FUSION (transcriptome-wide association study) software (Gusev et al. 2016). TWAS was performed for 20 neurological and psychiatric disorders across 16 tissues. Precomputed expression reference weights based on GTEx v7 multi-tissue RNA-seq data for 16 tissues were obtained from http://gusevlab.org/projects/fusion/. Correlation between each pair of disorders was calculated using the RHOGE package (Gusev et al. 2016; Mancuso et al. 2017) (https://github.com/bogdanlab/RHOGE).
+
+## Requirements
+For both tools R (version > 3.6) is needed. Installation procedure and requirements for TWAS/FUSION can be found here: http://gusevlab.org/projects/fusion/ ; for RHOGE here: https://github.com/bogdanlab/RHOGE. 
+
+For correct work of all scripts required libraries should be installed in R:
+```console
+install.packages(c('optparse','RColorBrewer', 'data.table', 'dplyr', 'reshape', 'ggplot2', 'MASS', 'stringr', 'stats', 'tidyr')
+```
 
 The whole pipeline is illustrated below. All bash and R scripts are shown in yellow sircles. Dashed line means that this script is launched automatically. Examples of usage for each script are in text below.
 
